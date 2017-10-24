@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}!", name: "Building-chu" %></h2>
+  <p class="lead">Prototype Matrix Building-Server</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Resources</h4>
+    <ul>
+      <li>
+        <a href="http://webwidematrix.org/developers">Inroduction for developers</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Help</h4>
+    <ul>
+      <li>
+        <a href="https://twitter.com/web_wide_matrix">@web_wide_matrix</a>
+      </li>
+    </ul>
+  </div>
+</div>
