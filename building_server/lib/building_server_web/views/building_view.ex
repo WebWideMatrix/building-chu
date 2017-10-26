@@ -3,7 +3,8 @@ defmodule BuildingServerWeb.BuildingView do
 
   def render("index.json", %{buildings: buildings}) do
     %{
-      buildings: Enum.map(buildings, &building_json/1)
+      count: Enum.count(buildings),
+      buildings: buildings
     }
   end
 
