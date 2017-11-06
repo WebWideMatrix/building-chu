@@ -10,7 +10,14 @@ defmodule BuildingServerWeb.BuildingController do
     render conn, "index.json", buildings: buildings
   end
 
-  def buildings_in_address(conn, %{"address" => address}) do
+  def get_building(conn, %{"address" => address}) do
+    query = from bldg in "buildings",
+              where: bldg.address == ^address
+    buildings = Repo.all(query)
+    render conn, "index.json", buildings: buildings
+  end
+
+  def get_buildings_in_address(conn, %{"address" => address}) do
     query = from bldg in "buildings",
               where: bldg.flr == ^address
     buildings = Repo.all(query)
