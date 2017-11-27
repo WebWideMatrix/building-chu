@@ -7,21 +7,21 @@ defmodule BuildingServerWeb.BuildingController do
     query = from bldg in "buildings",
               where: bldg.x >= 0
     buildings = Repo.all(query)
-    render conn, "index.json", buildings: buildings
+    render conn, "buildings.json", buildings: buildings
   end
 
   def get_building(conn, %{"address" => address}) do
     query = from bldg in "buildings",
               where: bldg.address == ^address
     buildings = Repo.all(query)
-    render conn, "index.json", buildings: buildings
+    render conn, "buildings.json", buildings: buildings
   end
 
   def get_buildings_in_address(conn, %{"address" => address}) do
     query = from bldg in "buildings",
               where: bldg.flr == ^address
     buildings = Repo.all(query)
-    render conn, "index.json", buildings: buildings
+    render conn, "buildings.json", buildings: buildings
   end
 
 end
