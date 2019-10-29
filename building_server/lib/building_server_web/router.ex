@@ -23,5 +23,8 @@ defmodule BuildingServerWeb.Router do
      pipe_through :api
 
      get "/buildings", BuildingController, :index
+     get "/buildings/:address", BuildingController, :get_building
+     get "/buildings/in/:address", BuildingController, :get_buildings_in_address
+
   end
 end

@@ -1,10 +1,8 @@
 defmodule BuildingServerWeb.BuildingView do
   use BuildingServerWeb, :view
 
-  def render("index.json", %{buildings: buildings}) do
-    %{
-      buildings: Enum.map(buildings, &building_json/1)
-    }
+  def render("buildings.json", %{buildings: buildings}) do
+    buildings
   end
 
   def building_json(building) do
